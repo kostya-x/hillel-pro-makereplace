@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Убрать символы</title>
+</head>
+<body>
+  <script>
+    var text = prompt("Введите текст");
+    var symbols = prompt("Введите символы которые хотите убрать из текста");
+
+    function makeReplace(text, symbols) {
+      for (i = 0; i < text.length; i++ ) {
+        for (j = 0; j < symbols.length; j++) {
+          text = text.replace(symbols[j], "");
+        }
+      }
+
+      return text;
+    }
+
+    alert(makeReplace(text, symbols));
+  </script>
+</body>
+</html>
